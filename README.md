@@ -1,1 +1,3 @@
-A simple visualization of Conway's Game of Life
+Site Link:
+
+https://acbradley7.github.io/CGOL-Web/
