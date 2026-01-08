@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Conway's Game of Life | Visualization</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <script src="script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/p5@1.6.0/lib/p5.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/p5.sound@0.2.0/dist/p5.sound.min.js "></script>
+    </head>
+    <body>
+        <main>
+            <div id="canvas-wrapper"></div>
+            <div id="step-number"></div>
+            <div id="controls" class="column-container">
+                <div class="container justify-content-evenly">
+                    <button onclick="startSimulation()">Simulate</button>
+                    <button onclick="pauseSimulation()">Pause Simulation</button>
+                    <button onclick="nextGeneration()">Step Once</button>
+                </div>
+                <div class="container justify-content-evenly">
+                    <label for="speed-selection">Speed:</label>
+                    <select name="speed" id="speed-selection">
+                        <option value="">--Select Speed--</option>
+                        <option value="VERYFAST">Very Fast</option>
+                        <option value="FAST">Fast</option>
+                        <option value="MEDIUM">Medium</option>
+                        <option value="SLOW">Slow</option>
+                        <option value="VERYSLOW">Very Slow</option>
+                    </select>
+                    <label for="preset-selection">Preset:</label>
+                    <select name="preset" id="preset-selection">
+                        <option value="">--Select Preset--</option>
+                        <option value="acorn">Acorn</option>
+                        <option value="glider">Glider</option>
+                        <option value="ants">Ants</option>
+                    </select>
+                </div>
+                <div class="container justify-content-evenly">
+                    <button onclick="updateWithPreset()">Reset Grid</button>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
